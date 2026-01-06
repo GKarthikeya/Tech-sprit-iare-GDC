@@ -48,6 +48,34 @@ const UI_STRINGS: Record<string, Record<string, string>> = {
     calibration_down: "नीचे झुकें।",
     calibration_done: "सब तैयार है।",
     skip_calibration: "छोड़ें"
+  },
+  'te-IN': {
+    camera_on: "విజన్ మోడ్ సక్రియం చేయబడింది.",
+    camera_off: "విజన్ మోడ్ ఆఫ్.",
+    ready: "సిస్టమ్ సిద్ధంగా ఉంది",
+    listening: "వింటున్నాను...",
+    speaking: "విజన్ వాయిస్",
+    calibration_start: "కాలిబ్రేషన్ ప్రారంభమైంది.",
+    calibration_right: "కుడి వైపుకు తిరగండి.",
+    calibration_left: "ఎడమ వైపుకు తిరగండి.",
+    calibration_up: "పైకి వంచండి.",
+    calibration_down: "కిందికి వంచండి.",
+    calibration_done: "అంతా సిద్ధం.",
+    skip_calibration: "దాటవేయి"
+  },
+  'es-ES': {
+    camera_on: "Modo visión activado.",
+    camera_off: "Modo visión apagado.",
+    ready: "Sistema listo",
+    listening: "Escuchando...",
+    speaking: "Voz de Visión",
+    calibration_start: "Calibración iniciada.",
+    calibration_right: "Gira a la derecha.",
+    calibration_left: "Gira a la izquierda.",
+    calibration_up: "Inclina hacia arriba.",
+    calibration_down: "Inclina hacia abajo.",
+    calibration_done: "Todo listo.",
+    skip_calibration: "Omitir"
   }
 };
 
@@ -118,7 +146,7 @@ const App: React.FC = () => {
   const [calibrationStep, setCalibrationStep] = useState<number>(0);
   const [voiceStatus, setVoiceStatus] = useState<VoiceStatus>('idle');
   const [isSpeaking, setIsSpeaking] = useState(false);
-  const [isMicHeld, setIsMicHeld] = useState(false);
+  const [isMicHeld, setIsMicHeld] = useState(true);
   const [visionActive, setVisionActive] = useState(false);
   const [isNavMode, setIsNavMode] = useState(false);
   const [isMapsMode, setIsMapsMode] = useState(false);
@@ -137,7 +165,7 @@ const App: React.FC = () => {
   const visionActiveRef = useRef(false);
   const isNavModeRef = useRef(false);
   const isMapsModeRef = useRef(false);
-  const isMicHeldRef = useRef(false);
+  const isMicHeldRef = useRef(true);
   const isSpeakingRef = useRef(false);
   const isCountingDownRef = useRef(false);
 
